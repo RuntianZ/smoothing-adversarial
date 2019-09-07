@@ -108,7 +108,7 @@ def _imagenet_on_philly(split: str) -> Dataset:
                             ]))
 
 def _imagenet(split: str) -> Dataset:
-    dir = os.environ[IMAGENET_LOC_ENV]
+    dir = IMAGENET_LOC_ENV
     if split == "train":
         subdir = os.path.join(dir, "train")
         transform = transforms.Compose([
