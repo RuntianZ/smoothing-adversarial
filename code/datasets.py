@@ -15,8 +15,8 @@ from zipdata import ZipData
 # set this environment variable to the location of your imagenet directory if you want to read ImageNet data.
 # make sure your val directory is preprocessed to look like the train directory, e.g. by running this script
 # https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh
-IMAGENET_LOC_ENV = "IMAGENET_DIR"
-IMAGENET_ON_PHILLY_DIR = "/hdfs/public/imagenet/2012/"
+IMAGENET_LOC_ENV = "/blob/dihe/pc/data/imagenet"
+IMAGENET_ON_PHILLY_DIR = None
 
 # list of all datasets
 DATASETS = ["imagenet", "imagenet32", "cifar10"]
@@ -25,10 +25,7 @@ DATASETS = ["imagenet", "imagenet32", "cifar10"]
 def get_dataset(dataset: str, split: str) -> Dataset:
     """Return the dataset as a PyTorch Dataset object"""
     if dataset == "imagenet":
-        if "PT_DATA_DIR" in os.environ: #running on Philly
-            return _imagenet_on_philly(split)
-        else:
-            return _imagenet(split)
+        return _imagenet(split)
 
     elif dataset == "imagenet32":
         return _imagenet32(split)
