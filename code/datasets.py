@@ -108,9 +108,6 @@ def _imagenet_on_philly(split: str) -> Dataset:
                             ]))
 
 def _imagenet(split: str) -> Dataset:
-    if not IMAGENET_LOC_ENV in os.environ:
-        raise RuntimeError("environment variable for ImageNet directory not set")
-
     dir = os.environ[IMAGENET_LOC_ENV]
     if split == "train":
         subdir = os.path.join(dir, "train")
