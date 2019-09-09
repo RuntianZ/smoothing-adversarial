@@ -15,7 +15,7 @@ from zipdata import ZipData
 # set this environment variable to the location of your imagenet directory if you want to read ImageNet data.
 # make sure your val directory is preprocessed to look like the train directory, e.g. by running this script
 # https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh
-IMAGENET_LOC_ENV = "/blob/dihe/pc/data/imagenet"
+IMAGENET_LOC_ENV = "/blob/dihe/pc/datasets/imagenet"
 IMAGENET_ON_PHILLY_DIR = None
 
 # list of all datasets
