@@ -25,7 +25,7 @@ DATASETS = ["imagenet", "imagenet32", "cifar10"]
 def get_dataset(dataset: str, split: str) -> Dataset:
     """Return the dataset as a PyTorch Dataset object"""
     if dataset == "imagenet":
-        return _imagenet(split)
+        return _imagenet_on_philly(split)
 
     elif dataset == "imagenet32":
         return _imagenet32(split)
