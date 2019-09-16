@@ -16,7 +16,7 @@ from zipdata import ZipData
 # make sure your val directory is preprocessed to look like the train directory, e.g. by running this script
 # https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh
 IMAGENET_LOC_ENV = "/blob/dihe/pc/datasets/imagenet"
-IMAGENET_ON_PHILLY_DIR = None
+IMAGENET_ON_PHILLY_DIR = "/hdfs/public/imagenet/2012/"
 
 # list of all datasets
 DATASETS = ["imagenet", "imagenet32", "cifar10"]
